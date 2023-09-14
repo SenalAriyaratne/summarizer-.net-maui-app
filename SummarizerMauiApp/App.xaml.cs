@@ -1,4 +1,5 @@
-﻿namespace SummarizerMauiApp
+﻿
+namespace SummarizerMauiApp
 {
     public partial class App : Application
     {
