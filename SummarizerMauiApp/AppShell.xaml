@@ -7,9 +7,13 @@
     xmlns:view="clr-namespace:SummarizerMauiApp.Views"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        
-        ContentTemplate="{DataTemplate view:HomePage}"
-        Route="MainPage" />
+   
+                
+    <ShellContent 
+        ContentTemplate="{DataTemplate view:HomePage}" />
+
+
+
+
 
 </Shell>

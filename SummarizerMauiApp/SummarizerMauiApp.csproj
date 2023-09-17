@@ -40,6 +40,7 @@
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Update="Resources\Images\school_fill_icon.svg" BaseSize="10,10" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -49,11 +50,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Font-Awesome-Solid-900.otf" />
+	  <None Remove="Resources\Fonts\MaterialIconsRound-Regular.otf" />
+	  <None Remove="Resources\Fonts\Pacifico-Regular.ttf" />
+	  <None Remove="Resources\Images\cogwheel.png" />
+	  <None Remove="Resources\Images\digital_library.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\note.png" />
+	  <None Remove="Resources\Images\pdf.png" />
+	  <None Remove="Resources\Images\school_fill_icon.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Models\" />
+	  <Folder Include="Services\" />
 	</ItemGroup>
 
 	<ItemGroup>
