@@ -2,11 +2,163 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SummarizerMauiApp.Views.HomePage"
+             xmlns:helper="clr-namespace:SummarizerMauiApp.FontHelper"
              >
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout BackgroundColor="#E9C46A">
+        <Grid  BackgroundColor="#E76F51">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition Width=".3*"/>
+                <ColumnDefinition Width=".3*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Column="1"
+                   Text="Summarize"
+                    TextColor="#22577A"
+                    FontFamily="Pacificoreg"
+                    FontAttributes="Bold"
+                    FontSize="50"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            
+        </Grid>
+
+        <Frame 
+               WidthRequest="550"
+               CornerRadius="5"
+               BackgroundColor="#F4A261"
+               Margin="0,50,0,0">
+            <Grid ColumnSpacing="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width=".5*"/>
+                
+            </Grid.ColumnDefinitions>
+            
+           
+                <Border Grid.Column="0"
+                    HeightRequest="200"
+                    WidthRequest="200"
+                    Background="#f7bf93"
+                    Stroke="#f7bf93"
+                    
+                    StrokeShape="RoundRectangle 25"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer>
+
+                        </TapGestureRecognizer>
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout VerticalOptions="Center" 
+                                         >
+
+                        <Image 
+                                 Source="note.png"
+                                 WidthRequest="75"
+                                 HorizontalOptions="Center"
+                                 
+                                 Margin="15"
+                                 
+                                 />
+                        <Label 
+                                    Text="Text to Summarize"
+                                    FontSize="25"
+                                    FontAttributes="Bold"
+                                    FontFamily="Pacificoreg"
+                                    TextColor="#22577A"
+                                    HorizontalTextAlignment="Center"
+                                    Margin="5"/>
+
+                    </VerticalStackLayout>
+                </Border>
+                <Border Grid.Column="1"
+                         HeightRequest="200"
+                         WidthRequest="200"
+                         Background="#f7bf93"
+                         Stroke="#F4A261"
+                         StrokeShape="RoundRectangle 25"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer>
+
+                        </TapGestureRecognizer>
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout VerticalOptions="Center">
+                        
+                        <Image
+                          Source="pdf.png"
+                          WidthRequest="75"
+                            Margin="10"
+                          HorizontalOptions="Center"/>
+                        <Label Text=" Doc to Summarize"
+                              FontSize="25"
+                              FontAttributes="Bold"
+                               FontFamily="Pacificoreg"
+                              TextColor="#22577A"
+                              HorizontalTextAlignment="Center"
+                              />
+                    </VerticalStackLayout>
+               
+                </Border>
+
+
+            </Grid>
+
+        </Frame>
+        <Grid ColumnDefinitions="*,Auto,*"
+              RowDefinitions="150,Auto"
+              
+            >
+            <Frame Grid.Column="1"
+                   Grid.Row="1"
+                   BackgroundColor="#2A9D8F"
+                   HeightRequest="100"
+                   WidthRequest="350"
+                   
+                   IsClippedToBounds="False"
+                   HorizontalOptions="CenterAndExpand">
+                <Grid RowDefinitions="Auto,30"
+                      ColumnDefinitions="*,*,*"
+                      
+                      >
+                    <Image Grid.Column="0"
+                           Source="home.png"
+                           HeightRequest="55"
+                           
+                           HorizontalOptions="Center"
+                           ToolTipProperties.Text="Home page"/>
+                    <Image Grid.Column="1"
+                           Source="digital_library.png"
+                           HeightRequest="55"
+                           VerticalOptions="Center"
+                           ToolTipProperties.Text="Saved summarized notes library"
+                           Margin="0,0,0,0"/>
+                    <Image Grid.Column="2"
+                           Source="cogwheel.png"
+                           HeightRequest="55"
+                           VerticalOptions="Center"
+                           ToolTipProperties.Text="Settings"/>
+                   
+
+                </Grid>
+                
+            </Frame>
+        </Grid>
+
     </VerticalStackLayout>
+
+
+
+
+
+
 </ContentPage>
